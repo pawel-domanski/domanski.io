@@ -4,7 +4,7 @@ title: "Domanski.io"
 description: "Nazywam się Paweł Domański i oto moje miejsce w sieci. Tutaj znajdziesz wszystko co mnie interesuje, a czym chciałbym się podzielić z wami. Jestem mężem kochającej żony, ojcem dwóch synów, na co dzień pracuję jako administrator baz danych, a w wolnych chwilach sklejam modele."
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
-baseurl: /
+baseurl: ''
 google_analytics: 'UA-176933448-1'
 disqus: 'pawel-domanski'
 mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
