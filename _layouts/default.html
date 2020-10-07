@@ -127,6 +127,9 @@
 
 <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
 
+<script src="{{ site.baseurl }}/assets/js/jquery.instagramFeed.min.js"></script>
+
+
 </head>
 
 {% if jekyll.environment == 'production' %}
@@ -197,7 +200,7 @@ src="https://www.facebook.com/tr?id=2753814011568795&ev=PageView&noscript=1"
                 <a href="https://www.linkedin.com/in/paweldomanski/"><i class="fab fa-linkedin" style="font-size:24px;"></i></a>
                 <a href="https://github.com/pawel-domanski"><i class="fab fa-github-square" style="font-size:24px;"></i></a>
             </div>
-</div>
+    </div>
     
    
 
@@ -208,22 +211,21 @@ src="https://www.facebook.com/tr?id=2753814011568795&ev=PageView&noscript=1"
            <div class="container">
               <div class="row">
                   <div class="col-xs-12 col-sm-4">
-                  <img src="{{ site.baseurl }}/assets/images/Ja_600.png" width="320">
+                    <img src="{{ site.baseurl }}/assets/images/Ja_600.png" width="320">
                   </div>
                   <div class="col-xs-12 col-sm-8">
-                   <p class="sitetag_big">Cześć </p>
-                  <p class="sitetag">{{ site.description }} ... <br>
-                  
-                  </p>
-                  Poniżej strony, na których mocno się udzielam
-                  <br>
-                  <br>
+                    <p class="sitetag_big">Cześć </p>
+                    <p class="sitetag">{{ site.description }} ... <br>
+                    </p>
+                    Poniżej strony, na których mocno się udzielam
+                    <br>
+                    <br>
                     <a href="https://papermodels.eu"><img src="{{ site.baseurl }}/assets/images/dexter_295.png" width="230"></a>
                     <a href="https://papermodels.pl"><img src="{{ site.baseurl }}/assets/images/Papermodels_350.png" width="230"></a>
                     <a href="https://dbadmin.pl"><img src="{{ site.baseurl }}/assets/images/DBAdmin_500_l.png" width="230"></a>
-                  <div>
+                  </div>
               </div>
-            </div>
+            </div> 
         </p>
     {% endif %}
 
@@ -232,21 +234,21 @@ src="https://www.facebook.com/tr?id=2753814011568795&ev=PageView&noscript=1"
     <div class="main-content">
         {{ content }}
     </div>
-
+    <div id="instagram-feed" class="instagram_feed text-center">
+    </div>
     {% if site.mailchimp-list %}
     <!-- Newsletter
     ================================================== -->
     <div class="newsletter text-center">
         {% include newsletter.html %}
     </div>
-    {% endif %}
     
-</div>
-
+    {% endif %}
 <!-- Begin Footer
 ================================================== -->
 <footer  class="footer">
     <div class="container">
+    
         <div class="row">
             <div class="col-md-6 col-sm-12 text-center text-lg-left">
                 Copyright © {{ site.time | date: "%Y" }} {{ site.name }} 
@@ -256,35 +258,10 @@ src="https://www.facebook.com/tr?id=2753814011568795&ev=PageView&noscript=1"
             </div>
         </div>
     </div>
+
 </footer>
 <!-- End Footer
 ================================================== -->
-
-<!-- Load Facebook SDK for JavaScript -->
-      <div id="fb-root"></div>
-      <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            xfbml            : true,
-            version          : 'v8.0'
-          });
-        };
-
-        (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/pl_PL/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
-
-      <!-- Your Chat Plugin code -->
-      <div class="fb-customerchat"
-        attribution=setup_tool
-        page_id="100233305162307"
-  logged_in_greeting="Cześć, w czym mogę pomóc?"
-  logged_out_greeting="Cześć, w czym mogę pomóc?">
-      </div>
 
 </div> <!-- /.site-content -->
 
@@ -325,5 +302,28 @@ $(document).on('scroll', function() {
   }
 });
 </script>
+
+
+<script>
+    (function($){
+        $(window).on('load', function(){
+            $.instagramFeed({
+                'username': 'pw.domanski',
+                'container': "#instagram-feed",
+                'display_profile': false,
+                'display_biography': true,
+                'display_gallery': true,
+                'callback': null,
+                'styling': true,
+                'items': 8,
+                'items_per_row': 4,
+                'margin': 1,
+                'lazy_load': true,
+                'on_error': console.error
+            });
+        });
+    })(jQuery);
+</script>
+
 </body>
 </html>
