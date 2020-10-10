@@ -1,0 +1,131 @@
+---
+title: "Moje Trzy Poziomy - Cele"
+layout: default
+permalink: "/trzypoziomy.html"
+image: assets/images/trzypoziomy_banner.png
+imageshadow: true
+---
+<!-- Featured Image -->
+{% include featured-image.html %}
+
+<ul>
+{% for poziomy in site.data.poziomy %}
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+        <h2>{{poziomy.nazwa}}</h2>
+        <img src="{{ site.baseurl }}/assets/images/kreska.png" "><br>
+    </div>
+    <div style="display: flex; height: 50px; justify-content: flex-start; align-items: center;">
+        <div style="width: 130px; justify-content: center; "> 
+            <b> Inspiracja </b> 
+        </div>
+        <div style="width: 50px;"> 
+            <img src="{{ site.baseurl }}/assets/images/cele/{{poziomy.inspiracja_icon}}" width="30" alt=""> 
+            </div> 
+        <div>  {{poziomy.inspiracja}} </div>
+    </div>
+    
+    <div id="{{ poziomy.klucz }}">
+        <ul class="nav">
+        <li class="nav-item">
+              <a class="nav-link" href="#{{ poziomy.klucz }}-0">
+                <strong>Start</strong>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#{{ poziomy.klucz }}-1">
+                <strong>Poziom 1</strong> {{ poziomy.poziom_1 }}
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#{{ poziomy.klucz }}-2">
+                <strong>Poziom 2</strong> {{ poziomy.poziom_2 }}
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#{{ poziomy.klucz }}-3">
+                <strong>Poziom 3</strong> {{ poziomy.poziom_3 }}
+              </a>
+            </li>
+        </ul>
+<div class="tab-content">
+            <div id="{{ poziomy.klucz }}-0" class="tab-pane" role="tabpanel" aria-labelledby="{{ poziomy.klucz }}-0">
+            <h3>Start</h3>
+            <h4>Cel końcowy {{ poziomy.poziom_0_cel }}</h4>
+            {% if poziomy.poziom_0_data  != '' %}
+                <b>Data wykonania </b> {{ poziomy.poziom_0_data }}</br>
+                <br>
+            {% endif %}
+                {{ poziomy.poziom_0_opis }}
+            </div>
+            <div id="{{ poziomy.klucz }}-1" class="tab-pane" role="tabpanel" aria-labelledby="{{ poziomy.klucz }}-1">
+            <h3>Poziom 1</h3>
+            <h4>Cel {{ poziomy.poziom_1_cel }}</h4>
+            {% if poziomy.poziom_1_data  != '' %}
+                <b>Data wykonania </b> {{ poziomy.poziom_1_data }}</br>
+                {{ poziomy.poziom_1_nagroda }}
+                <br>
+            {% endif %}
+                {{ poziomy.poziom_1_opis }}
+            </div>
+            <div id="{{ poziomy.klucz }}-2" class="tab-pane" role="tabpanel" aria-labelledby="{{ poziomy.klucz }}-2">
+            <h3>Poziom 2</h3>
+            <h4>Cel {{ poziomy.poziom_2_cel }}</h4>
+            {% if poziomy.poziom_2_data  != ''  %}
+                <b>Data wykonania </b> {{ poziomy.poziom_2_data }}</br>
+                {{ poziomy.poziom_2_nagroda }}
+                <br>
+            {% endif %}
+                {{ poziomy.poziom_2_opis }}
+            </div>
+            <div id="{{ poziomy.klucz }}-3" class="tab-pane" role="tabpanel" aria-labelledby="{{ poziomy.klucz }}-3">
+            <h3>Poziom 3</h3>
+            <h4>Cel {{ poziomy.poziom_3_cel }}</h4>
+            {% if poziomy.poziom_3_data != '' %}
+                <b>Data wykonania </b> {{ poziomy.poziom_3_data }}</br>
+                {{ poziomy.poziom_3_nagroda }}
+                <br>
+            {% endif %}
+                {{ poziomy.poziom_3_opis }}
+            </div>
+        </div>
+    </div>
+
+{% endfor %}
+</ul>
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+    {% for poziomy in site.data.poziomy %}
+    $('#{{poziomy.klucz}}').smartWizard({
+        selected: {{poziomy.wykonane}}, 
+        theme: 'arrows', 
+        enableURLhash: false, 
+        transition: {
+            animation: 'fade', 
+            speed: '400', 
+            easing: ''
+        },
+        toolbarSettings: {
+            showNextButton: true, 
+            showPreviousButton: true, 
+            toolbarExtraButtons: [] 
+        },
+        anchorSettings: {
+            anchorClickable: true, 
+            enableAllAnchors: false, 
+            markDoneStep: true, 
+            markAllPreviousStepsAsDone: true, 
+            removeDoneStepOnNavigateBack: true, 
+            enableAnchorOnDoneStep: false 
+        },
+        lang: { 
+            next: 'Następny',
+            previous: 'Poprzedni'
+        },
+        });
+    {% endfor %}
+});
+</script>
+
+Icons made by <a href="https://www.flaticon.com/authors/phatplus" title="phatplus">phatplus</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>

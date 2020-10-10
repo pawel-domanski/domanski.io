@@ -1,0 +1,44 @@
+- klucz: ZDROWIE_1 
+  nazwa: "Ważę 90 kg przez  rok"
+  inspiracja: Ja sam
+  inspiracja_icon: weight.png
+  wykonane: 0
+  poziom_0: Ważę poniżej 90Kg
+  poziom_0_cel: 2022
+  poziom_0_data: ''
+  poziom_0_opis: Moja waga jest za duża. Ważę powyżej 100 kg co przy moim wzroście jest to bardzo dużo, mój BMI jest powyżej 39.
+  poziom_1: Ważę poniżej 90Kg
+  poziom_1_cel: 2020
+  poziom_1_data: ''
+  poziom_1_opis: ''
+  poziom_1_nagroda: ''
+  poziom_2: Ważę poniżej 85kg
+  poziom_2_cel: 2021
+  poziom_2_data: ''
+  poziom_2_opis: ''
+  poziom_2_nagroda: ''
+  poziom_3: Ważę 85Kg przez kolejny rok
+  poziom_3_cel: 2022
+  poziom_3_data: ''
+  poziom_3_opis: ''
+  poziom_3_nagroda: ''
+- klucz: WIEDZA_1
+  nazwa: Mam tytuł inżyniera
+  inspiracja: Ja sam
+  inspiracja_icon: knowledge.png
+  wykonane: 3
+  poziom_1: Zapisałem się na studia.
+  poziom_1_cel: 2016
+  poziom_1_data: 10.07.2016
+  poziom_1_opis: Zrobiłem ten krok. Zapisałem się na studia. Po 20 latach oczekiwania i wielu próbach mobilizacji zrobiłem ten krok. Teraz muszę pracować nad tym, żeby nauczyć się tego wszystkigo i zdobyć tytuł inżyniera.
+  poziom_1_nagroda: Notes RHODIA
+  poziom_2: Jestem po pierwszym roku
+  poziom_2_cel: 2016
+  poziom_2_data: 05.09.2017
+  poziom_2_opis: Mam już za sobą pierwszy rok studiów. Jest ciężko ale nie wiedziałem, że aż tak. Mam kilka tyłów ale będę mógł to wszystko nadrobić w kolejnych semestrach.
+  poziom_2_nagroda: ''
+  poziom_3: Ważę 85Kg przez kolejny rok
+  poziom_3_cel: 2022
+  poziom_3_data: 15.09.2020
+  poziom_3_opis: Obroniłem tytuł inżyniera.
+  poziom_3_nagroda: No nadszedł ten dzień i mam swój wymarzony tytuł inżyniera. Bardzo się cieszę z tego ale nadal nie mogę uwierzyć. Jak trochę ochłonę na pewno będę chciał się podzielić swoim poglądem na ten temat. Na pewno było warto.
