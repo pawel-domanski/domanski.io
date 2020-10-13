@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: contact
 title: Kontakt
 permalink: /contact
 comments: false
@@ -10,8 +10,8 @@ try{
 var f = document.createElement("iframe");   
 f.src = 'https://forms.zohopublic.eu/pawel/form/ContactForm/formperma/I2qCI4ti9KcZ0KOxcehxMtBkOne6rldIEH8bS2xyWZc?zf_rszfm=1';
 f.style.border="none";                                           
-f.style.height="933px";
-f.style.width="95%";
+f.style.height="100%";
+f.style.width="100%";
 f.style.transition="all 0.5s ease";// No I18N
 var d = document.getElementById("zf_div_I2qCI4ti9KcZ0KOxcehxMtBkOne6rldIEH8bS2xyWZc");
 d.appendChild(f);
