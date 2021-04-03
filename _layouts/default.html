@@ -25,44 +25,10 @@
   height: 110px;
 }
 
-#navbar a {
-  position: relative;
-  color: #000;
-  text-decoration: none;
-  font-size: 20px;
-}
-
 #navbar #logo {
   font-size: 35px;
   font-weight: bold;
   transition: 0.4s;
-}
-
-#navbar a:hover {
-  color: black;
-}
-
-#navbar a::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #009304b1;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.3s ease-in-out 0s;
-}
-
-#navbar a:hover::before {
-  visibility: visible;
-  transform: scaleX(1);
-}
-
-#navbar a.active {
-  background-color: dodgerblue;
-  color: white;
 }
 
 #navbar-right {
@@ -80,11 +46,6 @@
 @media screen and (max-width: 580px) {
   #navbar {
     padding: 20px 10px !important;
-  }
-  #navbar a {
-    float: none;
-    display: block;
-    text-align: left;
   }
   #navbar-right {
     float: none;
@@ -114,6 +75,8 @@
     height: 300px;
     width: 600px;
 }
+
+
 </style>
 
 <link rel="icon" href="{{ site.baseurl }}/assets/images/logo.png">
@@ -201,7 +164,7 @@ src="https://www.facebook.com/tr?id=2753814011568795&ev=PageView&noscript=1"
                 <a href="{{ site.baseurl }}/about" style="font-size: 24px; margin-left: 2px;margin-right: 2px;"> O mnie </a>
                 <a href="https://www.facebook.com/domanski.io"><i class="fab fa-facebook-square" style="font-size: 24px; margin-left: 2px;margin-right: 2px;"></i></a>
                 <a href="https://twitter.com/pdomansk/"><i style="font-size: 24px; margin-left: 2px;margin-right: 2px;"  class="fab fa-twitter-square"></i></a>
-                <a href="https://www.instagram.com/pw.domanski/"><i style="font-size: 24px; margin-left: 2px;margin-right: 2px;"  class="fab fa-instagram-square"></i></a>
+                <a href="https://www.instagram.com/pw.domanski/"><i style="font-size: 24px; margin-left: 2px;margin-right: 2px;" <i class="fab fa-instagram"></i></a>
                 <a href="https://www.linkedin.com/in/paweldomanski/"><i class="fab fa-linkedin" style="font-size: 24px; margin-left: 2px;margin-right: 2px;"></i></a>
                 <a href="https://github.com/pawel-domanski"><i class="fab fa-github-square" style="font-size: 24px; margin-left: 2px;margin-right: 2px;"></i></a>
             </div>

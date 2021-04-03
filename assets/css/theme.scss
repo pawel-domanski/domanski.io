@@ -27,6 +27,12 @@ body {
 }
 a {
     color: darken($primary, 24%);
+    text-decoration: none;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+  background-size: 100% 4px;
 }
 img {
     max-width:100%;
@@ -242,7 +248,9 @@ img, img:hover {
         }
     }
 }
+//link
 
+/* Styles for the title tooltips */
 
 // blog grid
 .blog-grid-container {

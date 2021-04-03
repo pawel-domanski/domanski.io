@@ -258,17 +258,6 @@
   .navbar-toggler-icon {
     background-image: escape-svg($navbar-light-toggler-icon-bg);
   }
-
-  .navbar-text {
-    color: $navbar-light-color;
-    a {
-      color: $navbar-light-active-color;
-
-      @include hover-focus() {
-        color: $navbar-light-active-color;
-      }
-    }
-  }
 }
 
 // White links against a dark background
@@ -311,14 +300,4 @@
     background-image: escape-svg($navbar-dark-toggler-icon-bg);
   }
 
-  .navbar-text {
-    color: $navbar-dark-color;
-    a {
-      color: $navbar-dark-active-color;
-
-      @include hover-focus() {
-        color: $navbar-dark-active-color;
-      }
-    }
-  }
 }
